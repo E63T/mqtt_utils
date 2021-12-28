@@ -1,0 +1,15 @@
+name: mqtt_utils
+version: 0.1.0
+
+authors:
+  - unn4m3d <smelnikov871@gmail.com>
+
+crystal: 1.2.2
+
+license: MIT
+
+dependencies:
+  mqtt:
+    github: spider-gazelle/crystal-mqtt
+  version:
+    github: unn4m3d/version
