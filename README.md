@@ -1,6 +1,6 @@
-# mqtt_router
+# mqtt_utils
 
-TODO: Write a description here
+A set if MQTT related utility methods in Crystal (WIP)
 
 ## Installation
 
@@ -8,8 +8,8 @@ TODO: Write a description here
 
    ```yaml
    dependencies:
-     mqtt_router:
-       github: your-github-user/mqtt_router
+     mqtt_utils:
+       github: unn4m3d/mqtt_utils
    ```
 
 2. Run `shards install`
@@ -17,10 +17,12 @@ TODO: Write a description here
 ## Usage
 
 ```crystal
-require "mqtt_router"
-```
+require "mqtt_utils"
 
-TODO: Write usage instructions here
+info = MQTTUtils::RouteInfo.parse "d2p/message_type_method/g/gateway/d/device/r/reference"
+
+puts info.gateway_key # => gateway
+```
 
 ## Development
 
@@ -28,7 +30,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/mqtt_router/fork>)
+1. Fork it (<https://github.com/unn4m3d/mqtt_utils/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [unn4m3d](https://github.com/your-github-user) - creator and maintainer
+- [unn4m3d](https://github.com/unn4m3d) - creator and maintainer
