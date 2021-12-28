@@ -1,6 +1,6 @@
 # mqtt_utils
 
-A set if MQTT related utility methods in Crystal (WIP)
+A set if MQTT related utility methods (well, actually, only one method is implemented) in Crystal (WIP)
 
 ## Installation
 
