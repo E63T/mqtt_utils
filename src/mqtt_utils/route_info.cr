@@ -10,11 +10,12 @@ module MQTTUtils
         def initialize(@direction, @message_type, @method, @gateway_key = "", @device_key = "", @reference = "")
         end
 
-        def self.parse(topic : String)
+        def self.parse(topic : String, no_split : Bool = false)
             parts = topic.split('/')
 
             raise "Invalid direction #{parts.first}" if parts.first != "d2p" && parts.first != "p2d"
 
+            
             mtype, _, method = parts[1].rpartition('_')
 
             gkey = if idx = parts.index("g")
@@ -37,8 +38,8 @@ module MQTTUtils
 
             new(
                 parts[0],
-                mtype,
-                method,
+                (no_split ? parts[1] : mtype),
+                (no_split ? "" : method),
                 gkey,
                 dkey,
                 rkey
