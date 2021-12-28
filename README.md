@@ -9,7 +9,7 @@ A set if MQTT related utility methods (well, actually, only one method is implem
    ```yaml
    dependencies:
      mqtt_utils:
-       github: unn4m3d/mqtt_utils
+       github: E63T/mqtt_utils
    ```
 
 2. Run `shards install`
